@@ -5,8 +5,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql import default_comparator
 import datetime
 from sqlalchemy.ext.compiler import compiles
-
-from sqlalchemy.sql.coercions import InElementImpl
+import os
 
 BASE = declarative_base()
 
@@ -173,8 +172,8 @@ class Storage:
 
 
     def __init__(self, path):
-        #self.database_engine = create_engine(f'sqlite:///{path}', echo=False, pool_recycle=7200, connect_args={'check_same_thread': False})
-        self.database_engine = create_engine('postgresql://scott:tiger@localhost:5432/mydatabase')
+        # self.database_engine = create_engine(f'sqlite:///{path}', echo=False, pool_recycle=7200, connect_args={'check_same_thread': False})
+        self.database_engine = create_engine('postgresql://' + os.environ.get('bd_log') + ':' + os.environ.get('bd_pass') + '@' + os.environ.get('bd_addr') + '/dbname')
         BASE.metadata.create_all(self.database_engine)
 
         session = sessionmaker(bind=self.database_engine)
