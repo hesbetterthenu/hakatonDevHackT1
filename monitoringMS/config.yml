@@ -1,0 +1,30 @@
+---
+# Console logger
+- descriptor: "pip-services3-commons:logger:console:default:1.0"
+  level: "trace"
+
+# Performance counters that posts values to log
+- descriptor: "pip-services3-commons:counters:log:default:1.0"
+  level: "trace"
+
+# Default controller
+- descriptor: "monitoring:controller:default:default:1.0"
+  default_name: "Yo"
+
+# Common HTTP endpoint
+- descriptor: "pip-services3:endpoint:http:default:1.0"
+  connection:
+    protocol: "http"
+    host: "0.0.0.0"
+    port: {{{HTTP_PORT}}}{{^HTTP_PORT}}8081{{/HTTP_PORT}}
+
+# HTTP service version 1.0
+- descriptor: "monitoring:service:http:default:1.0"
+
+# Heartbeat service
+- descriptor: "pip-services3:heartbeat-service:http:default:1.0"
+  route: heartbeat
+
+# Status service
+- descriptor: "pip-services3:status-service:http:default:1.0"
+  route: status

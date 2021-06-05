@@ -1,0 +1,9 @@
+/home/ryuu/prjs/hakaton/msIntereface/obj/Debug/netstandard2.0/msIntereface.csprojAssemblyReference.cache
+/home/ryuu/prjs/hakaton/msIntereface/obj/Debug/netstandard2.0/msIntereface.AssemblyInfoInputs.cache
+/home/ryuu/prjs/hakaton/msIntereface/obj/Debug/netstandard2.0/msIntereface.AssemblyInfo.cs
+/home/ryuu/prjs/hakaton/msIntereface/obj/Debug/netstandard2.0/msIntereface.csproj.CoreCompileInputs.cache
+/home/ryuu/prjs/hakaton/msIntereface/bin/Debug/netstandard2.0/msIntereface.deps.json
+/home/ryuu/prjs/hakaton/msIntereface/bin/Debug/netstandard2.0/msIntereface.dll
+/home/ryuu/prjs/hakaton/msIntereface/bin/Debug/netstandard2.0/msIntereface.pdb
+/home/ryuu/prjs/hakaton/msIntereface/obj/Debug/netstandard2.0/msIntereface.dll
+/home/ryuu/prjs/hakaton/msIntereface/obj/Debug/netstandard2.0/msIntereface.pdb

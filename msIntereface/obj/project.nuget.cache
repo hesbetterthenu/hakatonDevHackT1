@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "d5HFxZA3H9SerokZ02AcvbZNDH9zfweChklU8cfwi6P8GSVKgadZIB0uq12lsgLQGC+9xotopHNivIwb5yJtqg==",
+  "success": true,
+  "projectFilePath": "/home/ryuu/prjs/hakaton/msIntereface/msIntereface.csproj",
+  "expectedPackageFiles": [
+    "/home/ryuu/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/home/ryuu/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
