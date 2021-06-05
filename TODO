@@ -1,0 +1,11 @@
+DONE:
+1) Microserveice skeleton
+2) Microserveice talk logic
+3) Rest API skeleton
+
+TODO:
+1) implement "bash startup.sh -port"
+2) End points map
+3) Implement ci/cd
+4) Microservice logic
+5) Unit tests
