@@ -8,6 +8,5 @@ namespace msIntereface {
         public int priv { get; set; }
         public int id { get; set; }
         public string name { get; set; }
-        public StatusMeta status { get; set; }
     }
 }

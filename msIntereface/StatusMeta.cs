@@ -10,7 +10,5 @@ namespace msIntereface {
         public int whoAprovedUserId { get; set; }
         public DateTime? created_dt { get; set; }
         public DateTime? edit_dt { get; set; }
-        public DateTime? aproved_dt { get; set; }
-        public DateTime? deleted_dt { get; set; }
     }
 }

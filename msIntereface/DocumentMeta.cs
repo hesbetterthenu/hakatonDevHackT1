@@ -4,6 +4,6 @@ namespace msIntereface {
         // some cool types
         public int type { get; set; }
         public string name { get; set; }
-        public StatusMeta status { get; set; }
+        public byte[] data { get; set; }
     }
 }

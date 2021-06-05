@@ -6,6 +6,5 @@ namespace msIntereface {
         public string currency { get; set; }
         public long amount { get; set; }
         public long frozen { get; set; }
-        public StatusMeta status { get; set; }
     }
 }
