@@ -2,10 +2,17 @@ DONE:
 1) Microserveice skeleton
 2) Microserveice talk logic
 3) Rest API skeleton
+4) Common classes implemented
+4) Small process examples
 
 TODO:
-1) implement "bash startup.sh -port"
-2) End points map
-3) Implement ci/cd
-4) Microservice logic
-5) Unit tests
+0) Fix " and \ in json responses
+1) make gitignore and clear repository
+2) implement classes for mecroservice "talk" (json)
+3) Microservice logic
+4) make functions safe !!! (and error responses)
+5) implement "bash startup.sh -port"
+6) End points map
+7) Implement ci/cd
+8) Unit tests
+9) rename classes ???

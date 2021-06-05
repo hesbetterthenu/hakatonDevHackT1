@@ -16,12 +16,15 @@ namespace Operations {
     public override void Register() {            
       base.Register();            
       RegisterRoute("GET", "/isalive", async (request, response, routeData) => {                
-        // string name = null;                
-        // if (request.Query.TryGetValue("name", out StringValues values)) {                    
-        //   name = values.FirstOrDefault();                
-        // }                
-        // await SendResultAsync(response, await _controller.IsAlive(name));
         await SendResultAsync(response, await _controller.IsAlive());
+      });        
+      RegisterRoute("GET", "/getUser", async (request, response, routeData) => {     
+        string ids = null;                
+        if (request.Query.TryGetValue("id", out StringValues values)) {                    
+          ids = values.FirstOrDefault();                
+        }         
+        int userId = int.Parse(ids);           
+        await SendResultAsync(response, await _controller.GetUser(userId));
       });        
     }    
   }

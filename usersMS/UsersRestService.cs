@@ -18,6 +18,15 @@ namespace Users {
       RegisterRoute("GET", "/isallive", async (request, response, routeData) => {                
         await SendResultAsync(response, await _controller.IsAlive());
       });        
+      RegisterRoute("GET", "/user", async (request, response, routeData) => {                
+        string ids = null;                
+        if (request.Query.TryGetValue("id", out StringValues values)) {                    
+          ids = values.FirstOrDefault();                
+        }         
+        int userId = int.Parse(ids);
+        response.ContentType = "json";
+        await SendResultAsync(response, await _controller.getUser(userId));
+      });        
     }    
   }
 }

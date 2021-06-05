@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/ryuu/prjs/hakaton/usersMS/usersMS.csproj": {}
+    "/home/ryuu/prjs/hakatonGit/hakatonDevHackT1/usersMS/usersMS.csproj": {}
   },
   "projects": {
-    "/home/ryuu/prjs/hakaton/msIntereface/msIntereface.csproj": {
+    "/home/ryuu/prjs/hakatonGit/hakatonDevHackT1/msIntereface/msIntereface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ryuu/prjs/hakaton/msIntereface/msIntereface.csproj",
+        "projectUniqueName": "/home/ryuu/prjs/hakatonGit/hakatonDevHackT1/msIntereface/msIntereface.csproj",
         "projectName": "msIntereface",
-        "projectPath": "/home/ryuu/prjs/hakaton/msIntereface/msIntereface.csproj",
+        "projectPath": "/home/ryuu/prjs/hakatonGit/hakatonDevHackT1/msIntereface/msIntereface.csproj",
         "packagesPath": "/home/ryuu/.nuget/packages/",
-        "outputPath": "/home/ryuu/prjs/hakaton/msIntereface/obj/",
+        "outputPath": "/home/ryuu/prjs/hakatonGit/hakatonDevHackT1/msIntereface/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ryuu/.nuget/NuGet/NuGet.Config"
@@ -41,6 +41,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             }
           },
           "imports": [
@@ -57,14 +61,14 @@
         }
       }
     },
-    "/home/ryuu/prjs/hakaton/usersMS/usersMS.csproj": {
+    "/home/ryuu/prjs/hakatonGit/hakatonDevHackT1/usersMS/usersMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ryuu/prjs/hakaton/usersMS/usersMS.csproj",
+        "projectUniqueName": "/home/ryuu/prjs/hakatonGit/hakatonDevHackT1/usersMS/usersMS.csproj",
         "projectName": "usersMS",
-        "projectPath": "/home/ryuu/prjs/hakaton/usersMS/usersMS.csproj",
+        "projectPath": "/home/ryuu/prjs/hakatonGit/hakatonDevHackT1/usersMS/usersMS.csproj",
         "packagesPath": "/home/ryuu/.nuget/packages/",
-        "outputPath": "/home/ryuu/prjs/hakaton/usersMS/obj/",
+        "outputPath": "/home/ryuu/prjs/hakatonGit/hakatonDevHackT1/usersMS/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/ryuu/.nuget/NuGet/NuGet.Config"
@@ -78,8 +82,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "/home/ryuu/prjs/hakaton/msIntereface/msIntereface.csproj": {
-                "projectPath": "/home/ryuu/prjs/hakaton/msIntereface/msIntereface.csproj"
+              "/home/ryuu/prjs/hakatonGit/hakatonDevHackT1/msIntereface/msIntereface.csproj": {
+                "projectPath": "/home/ryuu/prjs/hakatonGit/hakatonDevHackT1/msIntereface/msIntereface.csproj"
               }
             }
           }
