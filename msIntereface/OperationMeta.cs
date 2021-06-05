@@ -20,5 +20,6 @@ namespace msIntereface {
     public class TransactionOperaation : OperationMeta {
         public int from_acount_id { get; set; }
         public int to_acount_id { get; set; }
+        public long amount { get; set; }
     }
 }
