@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7XLSx88bNXKa0PoXobHr64q3jnOs2Pi3p2IYeZ5PooeXp0NkUjf6JG/RRBXVU/uSuuh4C2coSiYVAV6SfYxR2Q==",
+  "dgSpecHash": "7m5VoeddfRU8iP+renLVjv4ujNLMexLUYqgwUJUIJoMsrp9m2tn+wo1bM78Dq9uBfWG9OKfQmO5TsJkShuGUzg==",
   "success": true,
-  "projectFilePath": "/home/ryuu/prjs/hakaton/casherMS/casherMS.csproj",
+  "projectFilePath": "/home/ryuu/prjs/hakatonGit/hakatonDevHackT1/casherMS/casherMS.csproj",
   "expectedPackageFiles": [
     "/home/ryuu/.nuget/packages/handlebars.net/1.10.1/handlebars.net.1.10.1.nupkg.sha512",
     "/home/ryuu/.nuget/packages/microsoft.aspnetcore/2.2.0/microsoft.aspnetcore.2.2.0.nupkg.sha512",
@@ -77,6 +77,7 @@
     "/home/ryuu/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "/home/ryuu/.nuget/packages/system.security.principal.windows/4.5.0/system.security.principal.windows.4.5.0.nupkg.sha512",
     "/home/ryuu/.nuget/packages/system.text.encodings.web/4.5.0/system.text.encodings.web.4.5.0.nupkg.sha512",
+    "/home/ryuu/.nuget/packages/system.text.json/5.0.2/system.text.json.5.0.2.nupkg.sha512",
     "/home/ryuu/.nuget/packages/system.threading.tasks.extensions/4.5.1/system.threading.tasks.extensions.4.5.1.nupkg.sha512",
     "/home/ryuu/.nuget/packages/yamldotnet/8.1.1/yamldotnet.8.1.1.nupkg.sha512"
   ],

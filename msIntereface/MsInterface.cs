@@ -7,6 +7,27 @@ using System.Text.Json.Serialization;
 
 namespace msIntereface
 {
+    static class Globals
+    {
+        public static string users_ms_ip = System.Environment.GetEnvironmentVariable("users_ms_ip");
+        public static string users_ms_port = System.Environment.GetEnvironmentVariable("users_ms_port");
+        public static string statistics_ms_ip = System.Environment.GetEnvironmentVariable("statistics_ms_ip");
+        public static string statistics_ms_port = System.Environment.GetEnvironmentVariable("statistics_ms_port");
+        public static string operations_ms_ip = System.Environment.GetEnvironmentVariable("operations_ms_ip");
+        public static string operations_ms_port = System.Environment.GetEnvironmentVariable("operations_ms_port");
+        public static string monitoring_ms_ip = System.Environment.GetEnvironmentVariable("monitoring_ms_ip");
+        public static string monitoring_ms_port = System.Environment.GetEnvironmentVariable("monitoring_ms_port");
+        public static string logging_ms_ip = System.Environment.GetEnvironmentVariable("logging_ms_ip");
+        public static string logging_ms_port = System.Environment.GetEnvironmentVariable("logging_ms_port");
+        public static string documents_ms_ip = System.Environment.GetEnvironmentVariable("documents_ms_ip");
+        public static string documents_ms_port = System.Environment.GetEnvironmentVariable("documents_ms_port");
+        public static string casher_ms_ip = System.Environment.GetEnvironmentVariable("casher_ms_ip");
+        public static string casher_ms_port = System.Environment.GetEnvironmentVariable("casher_ms_port");
+        public static string bd_addr = System.Environment.GetEnvironmentVariable("bd_addr");
+        public static string bd_log = System.Environment.GetEnvironmentVariable("bd_log");
+        public static string bd_pass = System.Environment.GetEnvironmentVariable("bd_pass");
+    }
+
     public interface MsIntereface {
         Task<string> IsAlive();
         Task<string> getMonitor();

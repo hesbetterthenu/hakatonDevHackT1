@@ -15,8 +15,8 @@
 - descriptor: "pip-services3:endpoint:http:default:1.0"
   connection:
     protocol: "http"
-    host: "0.0.0.0"
-    port: {{{HTTP_PORT}}}{{^HTTP_PORT}}8086{{/HTTP_PORT}}
+    host: {{{logging_ms_ip}}}
+    port: {{{HTTP_PORT}}}{{^HTTP_PORT}}{{{logging_ms_port}}}{{/HTTP_PORT}}
 
 # HTTP service version 1.0
 - descriptor: "logging:service:http:default:1.0"
