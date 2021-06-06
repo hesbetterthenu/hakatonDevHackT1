@@ -17,7 +17,20 @@ namespace Documents {
       base.Register();            
       RegisterRoute("GET", "/isallive", async (request, response, routeData) => {                
         await SendResultAsync(response, await _controller.IsAlive());
-      });        
+      }); 
+
+      
+      RegisterRoute("GET", "/doc", async (request, response, routeData) => {                
+        string  id_str = null;         
+        // request.Body
+        if (request.Query.TryGetValue("id", out StringValues values1)) {                    
+          id_str = values1.FirstOrDefault();                
+        }     
+            
+        int ids = int.Parse( id_str);
+        response.ContentType = "json";
+        await SendResultAsync(response, await _controller.id(ids ));
+      });       
     }    
   }
 }

@@ -4,6 +4,8 @@ using System.Net;
 using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Npgsql;
+using System.Collections.Generic;
 
 namespace msIntereface
 {
@@ -24,6 +26,7 @@ namespace msIntereface
         public static string casher_ms_ip = System.Environment.GetEnvironmentVariable("casher_ms_ip");
         public static string casher_ms_port = System.Environment.GetEnvironmentVariable("casher_ms_port");
         public static string bd_addr = System.Environment.GetEnvironmentVariable("bd_addr");
+        public static string bd_ip = System.Environment.GetEnvironmentVariable("bd_ip");
         public static string bd_log = System.Environment.GetEnvironmentVariable("bd_log");
         public static string bd_pass = System.Environment.GetEnvironmentVariable("bd_pass");
     }
@@ -32,9 +35,42 @@ namespace msIntereface
         Task<string> IsAlive();
         Task<string> getMonitor();
         Task<UserMeta> getUser(int userId);
+        Task<List<AccountMeta>> getAccounts(int userId);
     }
     public class MsApi : MsIntereface
     {
+        public async Task<List<AccountMeta>> getAccounts(int userId) {
+            List<AccountMeta> res = new List<AccountMeta>();
+            try
+            {
+                string connstring = String.Format("Server={0};Port={1};" + 
+                    "User Id={2};Password={3};Database=dbname;",
+                    Globals.bd_addr, Globals.bd_ip, Globals.bd_log, 
+                    Globals.bd_pass);
+                NpgsqlConnection conn = new NpgsqlConnection(connstring);
+                conn.Open();
+
+                using (var cmd = new NpgsqlCommand("select id, name, user_id, amount, frozen from accountmeta where user_id=" + userId, conn))
+                using (var reader = cmd.ExecuteReader()) {
+                    while(reader.Read()) {
+                        AccountMeta temp = new AccountMeta();
+                        temp.id = reader.GetInt32(0);
+                        temp.name = reader.GetString(1);
+                        temp.userId = reader.GetInt32(2);
+                        temp.amount = reader.GetInt64(3);
+                        temp.frozen = reader.GetInt64(4);
+                        res.Add(temp);
+                    }
+                }
+                conn.Close();
+            }
+            catch (Exception msg)
+            {
+                Console.WriteLine(msg);
+                return await Task.FromResult(res);
+            }
+            return await Task.FromResult(res);
+        }
         public async Task<UserMeta> getUser(int userId) {            
             string html = string.Empty;
             string url = $"http://localhost:8082/users/user?id={userId}";

@@ -17,7 +17,13 @@ namespace Statistics {
       base.Register();            
       RegisterRoute("GET", "/isallive", async (request, response, routeData) => {                
         await SendResultAsync(response, await _controller.IsAlive());
-      });        
+      });     
+
+
+    
+
+
+
     }    
   }
 }

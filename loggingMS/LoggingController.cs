@@ -1,5 +1,7 @@
 using System.Threading.Tasks;
 using PipServices3.Commons.Config;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using msIntereface;
 namespace Logging {
   public class LoggingController : IConfigurable {
@@ -12,5 +14,10 @@ namespace Logging {
     public async Task<string> IsAlive()        {
       return await IMs.IsAlive();
     }    
+
+    public async Task <string> getResponse (string body)
+    {
+      return await Task.FromResult (body);
+    }
   }
 }

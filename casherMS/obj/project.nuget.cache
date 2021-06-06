@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7m5VoeddfRU8iP+renLVjv4ujNLMexLUYqgwUJUIJoMsrp9m2tn+wo1bM78Dq9uBfWG9OKfQmO5TsJkShuGUzg==",
+  "dgSpecHash": "Vh1dp0DOvfK+XhxM8bx6LPeCn4bX4rDqrrMEj4xR0hCW0nELJwYjjLenj3fX91NTsL+9NTwS4y4HuFaxcR50XA==",
   "success": true,
   "projectFilePath": "/home/ryuu/prjs/hakatonGit/hakatonDevHackT1/casherMS/casherMS.csproj",
   "expectedPackageFiles": [
@@ -60,6 +60,7 @@
     "/home/ryuu/.nuget/packages/microsoft.net.http.headers/2.2.0/microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "/home/ryuu/.nuget/packages/microsoft.netcore.platforms/2.0.0/microsoft.netcore.platforms.2.0.0.nupkg.sha512",
     "/home/ryuu/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/home/ryuu/.nuget/packages/npgsql/5.0.5/npgsql.5.0.5.nupkg.sha512",
     "/home/ryuu/.nuget/packages/pipservices3.commons/3.1.0/pipservices3.commons.3.1.0.nupkg.sha512",
     "/home/ryuu/.nuget/packages/pipservices3.components/3.1.0/pipservices3.components.3.1.0.nupkg.sha512",
     "/home/ryuu/.nuget/packages/pipservices3.container/3.1.0/pipservices3.container.3.1.0.nupkg.sha512",
@@ -73,7 +74,7 @@
     "/home/ryuu/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
     "/home/ryuu/.nuget/packages/system.reflection.metadata/1.6.0/system.reflection.metadata.1.6.0.nupkg.sha512",
     "/home/ryuu/.nuget/packages/system.reflection.typeextensions/4.4.0/system.reflection.typeextensions.4.4.0.nupkg.sha512",
-    "/home/ryuu/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.1/system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "/home/ryuu/.nuget/packages/system.runtime.compilerservices.unsafe/4.6.0/system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512",
     "/home/ryuu/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "/home/ryuu/.nuget/packages/system.security.principal.windows/4.5.0/system.security.principal.windows.4.5.0.nupkg.sha512",
     "/home/ryuu/.nuget/packages/system.text.encodings.web/4.5.0/system.text.encodings.web.4.5.0.nupkg.sha512",

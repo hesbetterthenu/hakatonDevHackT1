@@ -19,6 +19,7 @@ export documents_ms_port="8079"
 export casher_ms_ip="0.0.0.0"
 export casher_ms_port="8078"
 
-export bd_addr="0.0.0.0:5432"
+export bd_addr="localhost"
+export bd_ip="5432"
 export bd_log="postgres"
 export bd_pass="coolpass"

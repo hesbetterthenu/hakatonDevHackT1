@@ -4,6 +4,7 @@ using PipServices3.Commons.Config;
 using msIntereface;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Collections.Generic;
 
 namespace Users {
   public class UsersController : IConfigurable {
@@ -23,5 +24,15 @@ namespace Users {
     public async Task<string> IsAlive()        {
       return await IMs.IsAlive();
     }    
+    public async Task <string> getSome (int from  , int count )
+    { 
+      List<UserMeta>  m = new List<UserMeta>();
+      m.Add(new UserMeta());
+      m.Add(new UserMeta());
+      m.Add(new UserMeta());
+      m.Add(new UserMeta());
+      m.Add(new UserMeta());
+      return await Task.FromResult(JsonSerializer.Serialize(m));
+    }
   }
 }

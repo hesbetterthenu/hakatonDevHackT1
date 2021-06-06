@@ -13,25 +13,27 @@ class Storage:
 
     class AccountMeta(BASE):
 
-        __tablename__ = 'AccountMeta'
+        __tablename__ = 'accountmeta'
         id = Column(Integer, primary_key=True)
+        user_id = Column(Integer)
         name = Column(String, unique=True)
         amount = Column(Integer)
         frozen = Column(Integer)
 
         def __init__(self, login, password):
             self.id = None
+            self.user_id = None
             self.name = None
             self.amount = None
             self.frozen = None
 
         def __repr__(self):
-            return f'<UserContent({self.id}, {self.name}, {self.amount}, {self.frozen})>'
+            return f'<UserContent({self.id}, {self.name}, {self.user_id}, {self.amount}, {self.frozen})>'
 
 
     class DocumentMeta(BASE):
 
-        __tablename__ = 'DocumentMeta'
+        __tablename__ = 'documentmeta'
         id = Column(Integer, primary_key=True)
         type = Column(Integer)
         name = Column(String)
@@ -49,7 +51,7 @@ class Storage:
 
     class StatusMeta(BASE):
 
-        __tablename__ = 'StatusMeta'
+        __tablename__ = 'statusmeta'
         status_id = Column(Integer, primary_key=True)
         whoAprovedUserId = Column(Integer)
         created_dt = Column(DateTime)
@@ -60,7 +62,7 @@ class Storage:
 
     class UserMeta(BASE):
         
-        __tablename__ = 'UserMeta'
+        __tablename__ = 'usermeta'
         priv = Column(Integer)
         id = Column(Integer, primary_key=True)
         name = Column(String)
@@ -70,7 +72,7 @@ class Storage:
     
     class DocumentSignOperation(BASE):
 
-        __tablename__ = 'DocumentSignOperation'
+        __tablename__ = 'documentsignoperation'
         id = Column(Integer, primary_key=True)
         type = Column(Integer)
         status_id = Column(Integer)
@@ -85,7 +87,7 @@ class Storage:
 
     class DocumentSignOperationJ(BASE):
 
-        __tablename__ = 'DocumentSignOperationJ'
+        __tablename__ = 'documentsignoperationj'
         journal_id = Column(Integer, primary_key=True)
         id = Column(Integer)
         type = Column(Integer)
@@ -101,7 +103,7 @@ class Storage:
 
     class CreditOperation(BASE):
 
-        __tablename__ = 'CreditOperation'
+        __tablename__ = 'creditoperation'
         id = Column(Integer, primary_key=True)
         type = Column(Integer)
         status_id = Column(Integer)
@@ -120,7 +122,7 @@ class Storage:
 
     class CreditOperationJ(BASE):
 
-        __tablename__ = 'CreditOperationJ'
+        __tablename__ = 'creditoperationj'
         journal_id = Column(Integer, primary_key=True)
         id = Column(Integer)
         type = Column(Integer)
@@ -139,7 +141,7 @@ class Storage:
 
     class Transaction(BASE):
 
-        __tablename__ = 'Transaction'
+        __tablename__ = 'transaction'
         from_acount_id = Column(Integer)
         to_acount_id = Column(Integer)
         amount = Column(BigInteger)
@@ -155,7 +157,7 @@ class Storage:
 
     class TransactionJ(BASE):
 
-        __tablename__ = 'TransactionJ'
+        __tablename__ = 'transactionj'
         from_acount_id = Column(Integer)
         to_acount_id = Column(Integer)
         amount = Column(BigInteger)
@@ -173,7 +175,7 @@ class Storage:
 
     def __init__(self, path):
         # self.database_engine = create_engine(f'sqlite:///{path}', echo=False, pool_recycle=7200, connect_args={'check_same_thread': False})
-        self.database_engine = create_engine('postgresql://' + os.environ.get('bd_log') + ':' + os.environ.get('bd_pass') + '@' + os.environ.get('bd_addr') + '/dbname')
+        self.database_engine = create_engine('postgresql://' + os.environ.get('bd_log') + ':' + os.environ.get('bd_pass') + '@' + os.environ.get('bd_addr') +":" + os.environ.get('bd_ip')+ '/dbname')
         BASE.metadata.create_all(self.database_engine)
 
         session = sessionmaker(bind=self.database_engine)

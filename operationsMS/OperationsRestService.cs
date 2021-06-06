@@ -18,14 +18,57 @@ namespace Operations {
       RegisterRoute("GET", "/isalive", async (request, response, routeData) => {                
         await SendResultAsync(response, await _controller.IsAlive());
       });        
-      RegisterRoute("GET", "/getUser", async (request, response, routeData) => {     
-        string ids = null;                
-        if (request.Query.TryGetValue("id", out StringValues values)) {                    
-          ids = values.FirstOrDefault();                
-        }         
-        int userId = int.Parse(ids);           
-        await SendResultAsync(response, await _controller.GetUser(userId));
+      RegisterRoute("DELETE", "/operationhistory", async (request, response, routeData) => {     
+        string ids = null;   
+        string  historyCounts = null ;           
+        if (request.Query.TryGetValue("id", out StringValues values1)) {                    
+          ids = values1.FirstOrDefault();                
+        }   
+        if (request.Query.TryGetValue("historyCount", out StringValues values)) {                    
+          historyCounts = values.FirstOrDefault();                
+        }        
+        int id = int.Parse(ids);  
+        int count = int.Parse(historyCounts);          
+        await SendResultAsync(response, await _controller.deleteteHistoryCount(id , count));
+      });  
+
+
+           
+      RegisterRoute("GET", "/operationhistory", async (request, response, routeData) => {     
+        string ids = null;   
+        string  historyCounts = null ;           
+        if (request.Query.TryGetValue("id", out StringValues values1)) {                    
+          ids = values1.FirstOrDefault();                
+        }   
+        if (request.Query.TryGetValue("historyCount", out StringValues values)) {                    
+          historyCounts = values.FirstOrDefault();                
+        }        
+        int id = int.Parse(ids);  
+        int count = int.Parse(historyCounts);          
+        await SendResultAsync(response, await _controller.getHistoryCount(id , count));
       });        
+      
+
+
+
+        RegisterRoute("GET", "/operation", async (request, response, routeData) => {     
+        string types = null;                
+        if (request.Query.TryGetValue("type", out StringValues values)) {                    
+          types = values.FirstOrDefault();                
+        }         
+        int type = int.Parse(types);           
+        await SendResultAsync(response, await _controller.type(type));
+      });   
+
+
+
+       RegisterRoute("POST", "/operation", async (request, response, routeData) => {     
+        
+          // request.Body
+        await SendResultAsync(response, await _controller.operation(" d"));
+      });   
+
+
     }    
   }
 }
