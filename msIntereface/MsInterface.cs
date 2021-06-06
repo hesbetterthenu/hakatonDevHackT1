@@ -42,12 +42,12 @@ namespace msIntereface
         Task<List<DocumentSignOperaation>> DeleteDocumentSignOperaationsJ(int op_id, int count);
         Task<List<DocumentSignOperaation>> GetDocumentSignOperaationsJ(int op_id, int count);
         Task<List<DocumentSignOperaation>> GetDocumentSignOperaations(int user_id);
-        Task<List<DocumentSignOperaation>> DeleteCreditOperaationJ(int op_id, int count);
-        Task<List<DocumentSignOperaation>> GetCreditOperaationJ(int op_id, int count);
-        Task<List<DocumentSignOperaation>> GetCreditOperaation(int user_id);
-        Task<List<DocumentSignOperaation>> DeleteTransactionOperaationJ(int op_id, int count);
-        Task<List<DocumentSignOperaation>> GetTransactionOperaationJ(int op_id, int count);
-        Task<List<DocumentSignOperaation>> GetTransactionOperaation(int account_id);
+        Task<List<CreditOperaation>> DeleteCreditOperaationJ(int op_id, int count);
+        Task<List<CreditOperaation>> GetCreditOperaationJ(int op_id, int count);
+        Task<List<CreditOperaation>> GetCreditOperaation(int user_id);
+        Task<List<TransactionOperaation>> DeleteTransactionOperaationJ(int op_id, int count);
+        Task<List<TransactionOperaation>> GetTransactionOperaationJ(int op_id, int count);
+        Task<List<TransactionOperaation>> GetTransactionOperaation(int account_id);
     }
     public class MsApi : MsIntereface
     {
