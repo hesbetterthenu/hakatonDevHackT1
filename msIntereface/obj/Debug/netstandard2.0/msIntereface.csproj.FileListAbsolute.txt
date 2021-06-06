@@ -16,3 +16,5 @@
 /home/ryuu/prjs/hakatonGit/hakatonDevHackT1/msIntereface/bin/Debug/netstandard2.0/msIntereface.dll
 /home/ryuu/prjs/hakatonGit/hakatonDevHackT1/msIntereface/bin/Debug/netstandard2.0/msIntereface.pdb
 /home/ryuu/prjs/hakatonGit/hakatonDevHackT1/msIntereface/obj/Debug/netstandard2.0/msIntereface.csproj.AssemblyReference.cache
+C:\Users\efano\Desktop\12\hakatonDevHackT1\msIntereface\obj\Debug\netstandard2.0\msIntereface.dll
+C:\Users\efano\Desktop\12\hakatonDevHackT1\msIntereface\obj\Debug\netstandard2.0\msIntereface.pdb
