@@ -36,6 +36,18 @@ namespace msIntereface
         Task<string> getMonitor();
         Task<UserMeta> getUser(int userId);
         Task<List<AccountMeta>> getAccounts(int userId);
+        Task<List<UserMeta>> getUsers(int first, int count);
+        Task<Boolean> withdraw(int account_id, long amount);
+        Task<Boolean> deposit(int account_id, long amount);
+        Task<List<DocumentSignOperaation>> DeleteDocumentSignOperaationsJ(int op_id, int count);
+        Task<List<DocumentSignOperaation>> GetDocumentSignOperaationsJ(int op_id, int count);
+        Task<List<DocumentSignOperaation>> GetDocumentSignOperaations(int user_id);
+        Task<List<DocumentSignOperaation>> DeleteCreditOperaationJ(int op_id, int count);
+        Task<List<DocumentSignOperaation>> GetCreditOperaationJ(int op_id, int count);
+        Task<List<DocumentSignOperaation>> GetCreditOperaation(int user_id);
+        Task<List<DocumentSignOperaation>> DeleteTransactionOperaationJ(int op_id, int count);
+        Task<List<DocumentSignOperaation>> GetTransactionOperaationJ(int op_id, int count);
+        Task<List<DocumentSignOperaation>> GetTransactionOperaation(int account_id);
     }
     public class MsApi : MsIntereface
     {
